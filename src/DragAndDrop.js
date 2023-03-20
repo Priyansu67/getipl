@@ -65,7 +65,7 @@ const DragAndDrop = () => {
         placeholder="Enter Image Url"
         onChange={(e) => setUrl(e.target.value)}
       />
-      <button onClick={handleUrl(url)}>Submit</button>
+      <button onClick={()=>handleUrl(url)}>Submit</button>
 
       <div
         className="drag-drop-zone inside-drag-area"
