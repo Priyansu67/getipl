@@ -52,7 +52,7 @@ const DragAndDrop = () => {
       const ctx = canvas.getContext("2d");
       ctx.drawImage(img, 0, 0);
       const link = document.createElement("a");
-      link.download = "image.jpg";
+      link.download = Date.now().toString()+".jpg";
       link.href = canvas.toDataURL("image/jpeg");
       link.click();
     };
