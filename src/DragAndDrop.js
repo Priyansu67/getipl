@@ -79,7 +79,6 @@ const DragAndDrop = () => {
     });
     const img = new Image();
     img.crossOrigin = "anonymous";
-    setLoading(true);
     if(model === x2) {
         setModelLoading('2x');
     } else if(model === x4) {
@@ -90,7 +89,6 @@ const DragAndDrop = () => {
     await up
       .upscale(url)
       .then((res) => {
-        setLoading(false);
         setModelLoading('');
         img.src = res;
         img.onload = function () {
